@@ -34,22 +34,22 @@ le hiremos dando optimizaciones hasta convertirse en un programa estructurado ef
 <p>Si hacemos un ifconfig en nuestra terminal aparecerá algo parecido a esto:</p>
 <div>
 <p>eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500</p>
-<p>        inet 10.x.x.xx  netmask 255.xx.xxx.0  broadcast 10.0.x.xxx</p>
-<p>        inet6 fxx0::axx:xxxx:fxx3:xxxx  prefixlen 64  scopeid 0x20<link></p>
-<p>   <b>  ether 08:00:xx:xx:xx:xx </b> txqueuelen 1000  (Ethernet) </p>
-<p>        RX packets 36025  bytes 40582865 (38.7 MiB)</p>
-<p>        RX errors 0  dropped 0  overruns 0  frame 0</p>
-<p>        TX packets 15709  bytes 3132890 (2.9 MiB)</p>
-<p>        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</p>
+<p>&nbsp        inet 10.x.x.xx  netmask 255.xx.xxx.0  broadcast 10.0.x.xxx</p>
+<p>&nbsp        inet6 fxx0::axx:xxxx:fxx3:xxxx  prefixlen 64  scopeid 0x20<link></p>
+<p>&nbsp   <b>  ether 08:00:xx:xx:xx:xx </b> txqueuelen 1000  (Ethernet) </p>
+<p>&nbsp        RX packets 36025  bytes 40582865 (38.7 MiB)</p>
+<p>&nbsp        RX errors 0  dropped 0  overruns 0  frame 0</p>
+<p>&nbsp        TX packets 15709  bytes 3132890 (2.9 MiB)</p>
+<p>&nbsp        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</p><br>
 
 <p>lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536</p>
-<p>        inet xxx.0.xx.1  netmask 255.x.x.x</p>
-<p>        inet6 ::1  prefixlen 128  scopeid 0x10<host></p>
-<p>        loop  txqueuelen 1000  (Local Loopback)</p>
-<p>        RX packets 20  bytes 996 (996.0 B)</p>
-<p>        RX errors 0  dropped 0  overruns 0  frame 0</p>
-<p>        TX packets 20  bytes 996 (996.0 B)</p>
-<p>        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</p>
+<p>&nbsp        inet xxx.0.xx.1  netmask 255.x.x.x</p>
+<p>&nbsp        inet6 ::1  prefixlen 128  scopeid 0x10<host></p>
+<p>&nbsp        loop  txqueuelen 1000  (Local Loopback)</p>
+<p>&nbsp        RX packets 20  bytes 996 (996.0 B)</p>
+<p>&nbsp        RX errors 0  dropped 0  overruns 0  frame 0</p>
+<p>&nbsp        TX packets 20  bytes 996 (996.0 B)</p>
+<p>&nbsp        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</p><br>
 </div>
 
 <p> la llamada ifconfig eth0 hw ether 00:11:22:33:44:66 cambia nuestra direccion MAC por la aquí expuesta.</p>
@@ -59,14 +59,14 @@ le hiremos dando optimizaciones hasta convertirse en un programa estructurado ef
 <h2> 2_MAC_change_usar_variables</h2> 
 <p>La primera optimización que haremos para seguir el camino del buen padawan es el uso de variables. Empecemos:</p>
   
-<p> Ver archivo mac_change_variable.py</p>
+<p><b> Ver archivo mac_change_variable.py</b></p>
 
 
 <h2> 3_MAC_change_input_user</h2> 
 <p> La siguiente optimizacion --> input de usuario, queremos que la interface y el mac sean establecidos por teclado.</p>
 
 <p> si utilizas python 2 usar raw_input, para python 3 input
-<p> Ver archivo mac_change_input_user.py</p>
+<p><b> Ver archivo mac_change_input_user.py</b></p>
 
 
 <h2> 4_MAC_change_arguments_and_options</h2> 
