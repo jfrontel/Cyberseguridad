@@ -1,3 +1,4 @@
+<h1> MAC_change </h1>
 <p>Con MAC_change cambiaremos nuestra dirección MAC.</p>
 
 <p><b>¿Por qué cambiar la dirección MAC?</b></p>
@@ -72,8 +73,6 @@ le hiremos dando optimizaciones hasta convertirse en un programa estructurado ef
 <p>Si introducimos en la terminal <b> sudo python mac_change.py --help </b> nos dará la ayuda descrita dentro del programa para poder ejecutarlo</p>
 <p>Tenemos que introducir sudo python mac_change.py --interface (argumento) --mac (argumento)
 
-
-
 <h2> 4_MAC_change_arguments_and_options</h2> 
 <p>Nuestro programa funciona pero no es muy seguro, una persona que sabe hackear programas lo haria con gran facilidad y esto se debe a <b>shell=True</b>, si escribimos en la terminal cuando nos pide la interface eth0;(punto y coma para decirle a la terminal que queremos correr otro comando). </p>
 <p> --> eth0;ls;pwd nos correra comandos que no deseamos.</p>
@@ -82,19 +81,31 @@ le hiremos dando optimizaciones hasta convertirse en un programa estructurado ef
 <p>optparse es una biblioteca más conveniente, flexible y poderosa para analizar opciones de línea de comandos que el antiguo módulo getopt. optparse usa un estilo más declarativo: creas una instancia de OptionParser, le añades las opciones deseadas y realizas el análisis sintáctico de la línea de comandos. optparse permite a los usuarios especificar opciones siguiendo la sintaxis convencional de GNU/POSIX, además de generar mensajes de uso y de ayuda automáticamente.</p>
 <p><b> Ver archivo 4_mac_change_arguments_and_options.py</b></p>
 
-<h2> 5_MAC_change_fuctions</h2> 
+<h2> 5_MAC_change_fuctions</h2>
+<p> Estructuraremos nuestro programa en funciones.</p>
 <p><b> Ver archivo 5_mac_change_fuctions.py</b></p>
 
-
-<h2> 6_MAC_change_toma_de_decisiones</h2> 
-<p><b> Ver archivo 4_mac_change_toma_de_decisiones.py</b></p>
-
+<h2> 6_MAC_change_toma_de_decisiones</h2>
+<p> Guiaremos al usuario mediante condiciones (if) para las distintas salidad o errores </p>
+<p><b> Ver archivo 6_mac_change_toma_de_decisiones.py</b></p>
 
 <h2> 7_MAC_change_automatizar_salida</h2> 
-<p><b> Ver archivo 4_mac_change_automatizar_salida.py</b></p>
+<p> Para no tener que comprobar manualmente si la dirección MAC ha cambiado, lo automatizamos dentro del programa con:</p>
+<p>&nbsp subprocess.check_output(["ifconfig", options.interface])
+<p><b> Ver archivo 7_mac_change_automatizar_salida.py</b></p>
 
+<h2> 8_MAC_change_expresiones_regulares</h2> 
+<p><b> Ver archivo 8_mac_change_expresiones_regulares.py</b></p>
+<p> Cuando ejecutamos ifconfig en nuestra terminal el resultado nos ofrece datos que no necesitamos, para filtrar esta salida a los datos que necesitamos utilizaremos las expresiones regulares</p>
+<p> &nbsp--> https://docs.python.org/es/3/library/re.html</p>
+
+<p></p>
 
 Para finalizar diremos que existe ya una herramienta para hacer esto: <b>MAC Changer</b> es una utilidad para ver/manipular la dirección MAC de las interfaces de red.</p>
 <p>Su instalacion: $ sudo apt-get install macchanger</p>
-<p>Pero nosotros tenemos la nuestra creada con sudor y muchas lágrimas, y por mi parte la usaré .
-  
+<p>Pero nosotros tenemos la nuestra creada con sudor y muchas lágrimas, y por mi parte la usaré.
+
+
+<p> ¿Qué de donde he sacado todo esto sin tener ni idea de cyberseguridad?</p>
+<br>
+<p> <b> &nbsp&nbsp --> https://www.youtube.com/watch?v=5-IRImDXjjc </b></p>
