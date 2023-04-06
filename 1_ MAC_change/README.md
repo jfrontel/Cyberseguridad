@@ -68,6 +68,11 @@ le hiremos dando optimizaciones hasta convertirse en un programa estructurado ef
 <p> si utilizas python 2 usar raw_input, para python 3 input
 <p><b> Ver archivo mac_change_input_user.py</b></p>
 
+<p>Ahora podemos meter los parametros como opciones del programa.</p>
+<p>Si introducimos en la terminal <b> sudo python mac_change.py --help </b> nos dará la ayuda descrita dentro del programa para poder ejecutarlo</p>
+<p>Tenemos que introducir sudo python mac_change.py --interface (argumento) --mac (argumento)
+
+
 
 <h2> 4_MAC_change_arguments_and_options</h2> 
 <p>Nuestro programa funciona pero no es muy seguro, una persona que sabe hackear programas lo haria con gran facilidad y esto se debe a <b>shell=True</b>, si escribimos en la terminal cuando nos pide la interface eth0;(punto y coma para decirle a la terminal que queremos correr otro comando). </p>
@@ -75,9 +80,18 @@ le hiremos dando optimizaciones hasta convertirse en un programa estructurado ef
 
 <p>Usaremos import optparse, para poder importar los comandos.</p>
 <p>optparse es una biblioteca más conveniente, flexible y poderosa para analizar opciones de línea de comandos que el antiguo módulo getopt. optparse usa un estilo más declarativo: creas una instancia de OptionParser, le añades las opciones deseadas y realizas el análisis sintáctico de la línea de comandos. optparse permite a los usuarios especificar opciones siguiendo la sintaxis convencional de GNU/POSIX, además de generar mensajes de uso y de ayuda automáticamente.</p>
+<p><b> Ver archivo 4_mac_change_arguments_and_options.py</b></p>
+
+<h2> 5_MAC_change_fuctions</h2> 
+<p><b> Ver archivo 5_mac_change_fuctions.py</b></p>
 
 
+<h2> 6_MAC_change_toma_de_decisiones</h2> 
+<p><b> Ver archivo 4_mac_change_toma_de_decisiones.py</b></p>
 
+
+<h2> 7_MAC_change_automatizar_salida</h2> 
+<p><b> Ver archivo 4_mac_change_automatizar_salida.py</b></p>
 
 
 Para finalizar diremos que existe ya una herramienta para hacer esto: <b>MAC Changer</b> es una utilidad para ver/manipular la dirección MAC de las interfaces de red.</p>
